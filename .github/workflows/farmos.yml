@@ -10,6 +10,7 @@ jobs:
         version:
           - BASE_IMAGE: "farmos/farmos"
             TAG: "4.x"
+            IMAGE: "farmos"
 
     steps:
       - name: Checkout
@@ -31,7 +32,7 @@ jobs:
           context: "{{defaultContext}}"
           platforms: linux/amd64,linux/arm64
           file: "Dockerfile"
-          tags: registry.cn-hangzhou.aliyuncs.com/lawxen/${{ matrix.version.BASE_IMAGE }}:${{ matrix.version.TAG }}
+          tags: registry.cn-hangzhou.aliyuncs.com/lawxen/${{ matrix.version.IMAGE }}:${{ matrix.version.TAG }}
           build-args: |
             BASE_IMAGE=${{ matrix.version.BASE_IMAGE }}
             TAG=${{ matrix.version.TAG }}
