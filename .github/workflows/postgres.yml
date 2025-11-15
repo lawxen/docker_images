@@ -31,7 +31,7 @@ jobs:
           context: "{{defaultContext}}"
           platforms: linux/amd64,linux/arm64
           file: "Dockerfile"
-          tags: registry.cn-hangzhou.aliyuncs.com/lawxen/postgres:${{ matrix.version.TAG }}
+          tags: registry.cn-hangzhou.aliyuncs.com/lawxen/${{ matrix.version.BASE_IMAGE }}:${{ matrix.version.TAG }}
           build-args: |
             BASE_IMAGE=${{ matrix.version.BASE_IMAGE }}
             TAG=${{ matrix.version.TAG }}
