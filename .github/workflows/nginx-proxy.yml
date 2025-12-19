@@ -1,4 +1,4 @@
-name: postgres
+name: nginx-proxy
 
 on: workflow_dispatch
 
