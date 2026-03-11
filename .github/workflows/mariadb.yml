@@ -1,4 +1,4 @@
-name: postgres
+name: mariadb
 
 on: workflow_dispatch
 
